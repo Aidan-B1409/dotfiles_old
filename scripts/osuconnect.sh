@@ -1,0 +1,48 @@
+#!/bin/bash
+
+IMG_LOC="C:\Users\Aidan\Documents\cluster\cluster.jpg"
+USERNAME="beerya"
+ACCESS_ADDR="flip.engr.oregonstate.edu"
+CLUSTER_ADDR="submit-a.hpc.engr.oregonstate.edu"
+OS2_ADDR="os2.engr.oregonstate.edu"
+OS1_ADDR="os1.engr.oregonstate.edu"
+OLDOS1_ADDR="oldos1.engr.oregonstate.edu"
+OLDOS2_ADDR="oldos2.engr.oregonstate.edu"
+ADDR=
+
+while getopts "d:" arg
+do
+    case $arg in
+        "d")
+            if [ $OPTARG = "cluster" ]
+            then
+               python3 ~/.scripts/change_winterm_background.py -p $IMG_LOC
+               ADDR=$CLUSTER_ADDR
+            fi
+            if [ $OPTARG = "os2" ]
+            then
+               ADDR=$OS2_ADDR
+            fi
+            if [ $OPTARG = "os1" ]
+            then
+               ADDR=$OS1_ADDR
+            fi
+            if [ $OPTARG = "oldos1" ]
+            then
+               ADDR=$OLDOS1_ADDR
+            fi
+            if [ $OPTARG = "oldos2" ]
+            then
+               ADDR=$OLDOS2_ADDR
+            fi
+            if [ $OPTARG = "flip" ]
+            then
+               ADDR=$ACCESS_ADDR
+            fi               
+            ;;
+    esac
+done
+
+echo "${USERNAME}@${ADDR}"
+ssh -t $USERNAME@$ACCESS_ADDR "ssh ${USERNAME}@${ADDR}"
+

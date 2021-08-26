@@ -1,0 +1,6 @@
+pane	0	0	:zsh	1	:*	0	:/home/echo/.ssh	0	zsh	:
+pane	0	0	:zsh	1	:*	1	:/home/echo	1	emacs	:emacs /home/echo/.ssh/config
+pane	0	0	:zsh	1	:*	2	:/home/echo	0	emacs	:emacs .zshrc
+pane	0	0	:zsh	1	:*	3	:/home/echo/.scripts	0	emacsclient	:emacsclient -a  osuconnect.sh
+window	0	0	1	:*	9b93,252x67,0,0{126x67,0,0[126x33,0,0,1,126x33,0,34,5],125x67,127,0[125x33,127,0,3,125x33,127,34,4]}
+state	0	

@@ -1,0 +1,21 @@
+- defaults:
+    link:
+        relink: true
+        force: true
+
+- clean: ['~']
+
+- link:
+    ~/.ssh/config:
+        create: true
+        path: ssh_config
+    ~/.config: config.d
+    ~/.emacs.d: emacs.d
+    ~/.scripts: scripts
+    ~/.tmux: tmux
+    ~/.emacs: emacs
+    ~/.gitconfig: gitconfig
+    ~/.p10k.zsh: p10k.zsh
+    ~/.profile: profile
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
