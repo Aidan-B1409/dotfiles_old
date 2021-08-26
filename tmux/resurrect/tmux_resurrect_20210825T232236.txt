@@ -1,0 +1,5 @@
+pane	0	1	:zsh	1	:*	0	:/home/echo	1	zsh	:
+pane	0	1	:zsh	1	:*	1	:/home/echo/.dotfiles	0	zsh	:
+pane	0	1	:zsh	1	:*	2	:/home/echo/.dotfiles	0	ssh	:ssh flip
+window	0	1	1	:*	f2b9,252x67,0,0{126x67,0,0,1,125x67,127,0[125x33,127,0,2,125x33,127,34,3]}
+state	0	
