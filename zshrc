@@ -123,6 +123,7 @@ plugins+=(git-it-on)
 plugins+=(send)
 
 export EDITOR='emacs'
+export ZSH_HIGHLIGHT_MAXLENGTH=60
 
 autoload zmv
 
@@ -157,3 +158,4 @@ alias gc="git commit -am"
 alias cp="rsync -a --info=progress2"
 
 
+plugins+=(send)
